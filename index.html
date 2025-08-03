@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWMT2 Server Presentation</title>
+    <meta name="description" content="NEWMT2 uluslararası sunucusuna hoş geldiniz - Epik savaşlar, büyülü alemler ve topluluk etkinlikleri sizi bekliyor!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        .hero-bg {
+            background: linear-gradient(to bottom, rgb(127 29 29), rgb(0 0 0), rgb(127 29 29));
+        }
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: scale(1.05);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen hero-bg">
+    <!-- Header -->
+    <header class="relative z-20 bg-black/40 backdrop-blur-sm border-b border-yellow-600/30">
+        <div class="container mx-auto px-4 py-4 md:py-6">
+            <nav class="flex items-center justify-between">
+                <h1 class="text-2xl md:text-3xl font-bold text-yellow-400 tracking-wider">
+                    NEWMT2
+                </h1>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-yellow-400 p-2">
+                    <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+                        <div class="w-full h-0.5 bg-yellow-400 hamburger-line"></div>
+                        <div class="w-full h-0.5 bg-yellow-400 hamburger-line"></div>
+                        <div class="w-full h-0.5 bg-yellow-400 hamburger-line"></div>
+                    </div>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="text-white hover:text-yellow-400 transition-colors">Ana Sayfa</a>
+                    <a href="#features" class="text-white hover:text-yellow-400 transition-colors">Özellikler</a>
+                    <a href="#systems" class="text-white hover:text-yellow-400 transition-colors">Sistemler</a>
+                    <a href="#contact" class="text-white hover:text-yellow-400 transition-colors">İletişim</a>
+                </div>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu md:hidden mt-4 pb-4 border-t border-yellow-600/30">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#hero" class="text-white hover:text-yellow-400 transition-colors">Ana Sayfa</a>
+                    <a href="#features" class="text-white hover:text-yellow-400 transition-colors">Özellikler</a>
+                    <a href="#systems" class="text-white hover:text-yellow-400 transition-colors">Sistemler</a>
+                    <a href="#contact" class="text-white hover:text-yellow-400 transition-colors">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center px-4">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img
+                src="https://placehold.co/1920x1080?text=Epic+medieval+fantasy+battlefield+with+warriors+and+magical+creatures+in+dramatic+lighting"
+                alt="Epic medieval fantasy battlefield with warriors and magical creatures in dramatic lighting"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/800x600?text=Image+Not+Available'"
+            />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-6 md:mb-8 tracking-wider leading-tight">
+                NEWMT2 SERVER PRESENTATION
+            </h2>
+            
+            <!-- Country Flags Grid -->
+            <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 gap-2 md:gap-4 mb-8 md:mb-12 max-w-2xl mx-auto">
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">GB</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">PL</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">RO</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">HU</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">DE</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">CZ</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">TR</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">GR</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">PT</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">FR</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">ES</span>
+                </div>
+                <div class="w-10 h-6 md:w-12 md:h-8 bg-white/20 rounded border border-white/30 flex items-center justify-center">
+                    <span class="text-xs font-semibold">IT</span>
+                </div>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-8 mb-6 md:mb-8 max-w-4xl mx-auto">
+                <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">NEWMT2 uluslararası sunucusuna hoş geldiniz!</h3>
+                <p class="text-sm md:text-lg mb-3 md:mb-4 leading-relaxed">
+                    Sunucumuz karmaşık sistemlerle dolu olmayan temel atmosfer üzerine kurulmuştur. 
+                    <span class="font-bold">Offline shop</span> ve <span class="font-bold">item finder</span> gibi gerekli sistemler 
+                    tabii ki tarafımızca da sağlanmaktadır. Ayrıca Krallıklar, takımlar ve 
+                    bireylerin çeşitli ödüller için birbirleriyle yarışabilecekleri bir <span class="font-bold">PvP Battle Arena</span> oluşturulmuştur.
+                </p>
+                <p class="text-sm md:text-lg leading-relaxed">
+                    Amacımız tüm oyuncular için en iyi oyun deneyimini sağlamaktır! 
+                    Topluluğumuzun bir parçası olmak ister misiniz? Şimdi bize katılın ve 
+                    NEWMT2'nin heyecan verici dünyasını keşfedin!
+                </p>
+            </div>
+
+            <button class="bg-red-700 hover:bg-red-800 text-yellow-100 border border-yellow-600 px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl font-semibold rounded-lg btn-hover shadow-lg shadow-red-900/50">
+                Sunucuya Katıl
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-20 bg-black/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-8 md:mb-16">Sunucu Özellikleri</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden card-hover">
+                    <div class="h-40 md:h-48 overflow-hidden">
+                        <img
+                            src="https://placehold.co/400x300?text=Epic+PvP+battles+in+medieval+arena+with+spectators+and+magical+effects"
+                            alt="Epic PvP battles in medieval arena with spectators and magical effects"
+                            class="w-full h-full object-cover"
+                            onerror="this.src='https://placehold.co/800x600?text=Image+Not+Available'"
+                        />
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">PvP Battle Arena</h3>
+                        <p class="text-sm md:text-base text-gray-300">
+                            Yoğun oyuncu vs oyuncu savaşlarında yarışın. Krallıklar, takımlar ve bireyler 
+                            özel arena sistemimizde zafer ve değerli ödüller için savaşabilir.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden card-hover">
+                    <div class="h-40 md:h-48 overflow-hidden">
+                        <img
+                            src="https://placehold.co/400x300?text=Magical+marketplace+with+floating+items+and+mystical+merchant+stalls"
+                            alt="Magical marketplace with floating items and mystical merchant stalls"
+                            class="w-full h-full object-cover"
+                            onerror="this.src='https://placehold.co/800x600?text=Image+Not+Available'"
+                        />
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">Offline Shop & Item Finder</h3>
+                        <p class="text-sm md:text-base text-gray-300">
+                            Gelişmiş mağaza sistemimizle çevrimdışıyken bile eşya ticareti yapın. 
+                            Kapsamlı item finder aracımızla nadir eşyaları kolayca bulun.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden card-hover">
+                    <div class="h-40 md:h-48 overflow-hidden">
+                        <img
+                            src="https://placehold.co/400x300?text=International+gaming+community+with+players+from+different+countries+celebrating"
+                            alt="International gaming community with players from different countries celebrating"
+                            class="w-full h-full object-cover"
+                            onerror="this.src='https://placehold.co/800x600?text=Image+Not+Available'"
+                        />
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">Uluslararası Topluluk</h3>
+                        <p class="text-sm md:text-base text-gray-300">
+                            Avrupa ve ötesinden oyunculara katılın. Uluslararası sunucumuz 
+                            kalıcı dostluklar kurmak için tüm ülkelerden oyuncuları memnuniyetle karşılar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Systems Section -->
+    <section id="systems" class="py-12 md:py-20 bg-gradient-to-b from-red-950/50 to-black/80">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-8 md:mb-16">Oyun Sistemleri</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+                    <!-- System 1 -->
+                    <div class="bg-black/60 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-red-800/50">
+                        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-3 md:mb-4">Krallık Savaşları</h3>
+                        <p class="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
+                            Büyük krallık vs krallık savaşlarına katılın. İttifaklar kurun, saldırıları planlayın 
+                            ve büyük çaplı epik savaşlarda bölgenizi savunun.
+                        </p>
+                        <ul class="text-sm md:text-base text-gray-300 space-y-1 md:space-y-2">
+                            <li>• Lonca vs Lonca savaşı</li>
+                            <li>• Bölge kontrol sistemi</li>
+                            <li>• Stratejik ittifak mekanikleri</li>
+                            <li>• Sezonluk krallık sıralamaları</li>
+                        </ul>
+                    </div>
+
+                    <!-- System 2 -->
+                    <div class="bg-black/60 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-red-800/50">
+                        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-3 md:mb-4">Karakter Gelişimi</h3>
+                        <p class="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
+                            Karakterinizi çoklu gelişim yolları ile geliştirin. Farklı becerilerde ustalaşın, 
+                            güçlü yeteneklerin kilidini açın ve oyun tarzınızı özelleştirin.
+                        </p>
+                        <ul class="text-sm md:text-base text-gray-300 space-y-1 md:space-y-2">
+                            <li>• Çoklu karakter sınıfları</li>
+                            <li>• Beceri ağacı özelleştirmesi</li>
+                            <li>• Ekipman geliştirme</li>
+                            <li>• Başarı sistemi</li>
+                        </ul>
+                    </div>
+
+                    <!-- System 3 -->
+                    <div class="bg-black/60 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-red-800/50">
+                        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-3 md:mb-4">Ticaret Ekonomisi</h3>
+                        <p class="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
+                            Oyuncu odaklı ekonomiye katılın. Eşya üretin, kaynak ticareti yapın 
+                            ve dinamik pazaryerimizde tüccar imparatorluğunuzu kurun.
+                        </p>
+                        <ul class="text-sm md:text-base text-gray-300 space-y-1 md:space-y-2">
+                            <li>• Oyuncudan oyuncuya ticaret</li>
+                            <li>• Üretim ve kaynak toplama</li>
+                            <li>• Pazar fiyat dalgalanmaları</li>
+                            <li>• Tüccar lonca sistemi</li>
+                        </ul>
+                    </div>
+
+                    <!-- System 4 -->
+                    <div class="bg-black/60 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-red-800/50">
+                        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-3 md:mb-4">Etkinlikler & Zindanlar</h3>
+                        <p class="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
+                            Özel etkinlikler ve zindanlarda kendinizi test edin. Güçlü bosslarla yüzleşin, 
+                            bulmacaları çözün ve özel ödüller kazanın.
+                        </p>
+                        <ul class="text-sm md:text-base text-gray-300 space-y-1 md:space-y-2">
+                            <li>• Haftalık özel etkinlikler</li>
+                            <li>• Zorlu zindan baskınları</li>
+                            <li>• Boss savaş mekanikleri</li>
+                            <li>• Özel etkinlik ödülleri</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Server Stats -->
+                <div class="bg-black/60 backdrop-blur-sm rounded-lg p-4 md:p-6 text-center border border-yellow-600/50">
+                    <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-4 md:mb-6">Sunucu İstatistikleri</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold text-yellow-400">5000+</div>
+                            <div class="text-sm md:text-base text-gray-300">Aktif Oyuncu</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold text-yellow-400">24/7</div>
+                            <div class="text-sm md:text-base text-gray-300">Sunucu Çalışma Süresi</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold text-yellow-400">12</div>
+                            <div class="text-sm md:text-base text-gray-300">Ülke</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold text-yellow-400">99.9%</div>
+                            <div class="text-sm md:text-base text-gray-300">Kararlılık</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black py-8 md:py-12 border-t border-yellow-600/30">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 md:mb-6">Maceranıza Başlamaya Hazır mısınız?</h2>
+            <p class="text-sm md:text-base text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto">
+                Nihai ortaçağ fantezi deneyiminde binlerce oyuncuya katılın. 
+                Karakterinizi yaratın, krallığınızı kurun ve efsanenizi yazın!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8">
+                <button class="bg-red-700 hover:bg-red-800 text-yellow-100 border border-yellow-600 px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl font-semibold rounded-lg btn-hover shadow-lg shadow-red-900/50 w-full sm:w-auto">
+                    Bugün Oynamaya Başla
+                </button>
+                <button class="border-yellow-600 text-yellow-400 hover:bg-red-700 hover:text-yellow-100 border px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl font-semibold rounded-lg btn-hover w-full sm:w-auto">
+                    İstemciyi İndir
+                </button>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8 max-w-4xl mx-auto">
+                <div class="bg-red-950/50 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-red-800/50">
+                    <h4 class="text-lg font-bold text-yellow-400 mb-2">Sunucu Bilgisi</h4>
+                    <p class="text-sm text-gray-300">Sunucu: NEWMT2 International</p>
+                    <p class="text-sm text-gray-300">Versiyon: En Son Kararlı</p>
+                    <p class="text-sm text-gray-300">Dil: Çok dilli</p>
+                </div>
+                <div class="bg-red-950/50 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-red-800/50">
+                    <h4 class="text-lg font-bold text-yellow-400 mb-2">Topluluk</h4>
+                    <p class="text-sm text-gray-300">Discord: Topluluğumuza katılın</p>
+                    <p class="text-sm text-gray-300">Forum: Resmi tartışmalar</p>
+                    <p class="text-sm text-gray-300">Destek: 7/24 yardım</p>
+                </div>
+                <div class="bg-red-950/50 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-red-800/50">
+                    <h4 class="text-lg font-bold text-yellow-400 mb-2">Başlangıç</h4>
+                    <p class="text-sm text-gray-300">1. İstemciyi indirin</p>
+                    <p class="text-sm text-gray-300">2. Hesabınızı oluşturun</p>
+                    <p class="text-sm text-gray-300">3. Krallığınızı seçin</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-yellow-600/30 pt-6 md:pt-8">
+                <p class="text-sm md:text-base text-gray-400">
+                    © 2024 NEWMT2 International Server. Tüm hakları saklıdır.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            } else {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+            }
+        });
+    </script>
+</body>
+</html>
